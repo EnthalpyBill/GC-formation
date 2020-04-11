@@ -9,14 +9,14 @@ By Bill Chen
 
 import numpy as np
 
-# ***** Eq. (3) in Behroozi et al. (2013) *****
+# ***** SMHM relation in Behroozi et al. (2013) *****
 
 def scale_factor(z):
     return 1 / (1+z)
 
 def cutoff(a):
     # Exponential cutoff of evolution of m_star(mh) with scale factor
-    
+
     return np.exp(-4*a*a)
 
 def fun1(x, alpha, delta, gamma):
