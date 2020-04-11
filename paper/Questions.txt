@@ -1,0 +1,23 @@
+*  Eq. (6) in Kravtsov & Gnedin (2005) gave the following relation: 
+        M_GC ~ (3x10^-5) * M_h.
+    Muratov & Gnedin (2010, MG10); Li & Gnedin (2014, LG14); Choksi et al. (2018, CGL18) both referred to this relation, but in the following form:
+        M_GC ~ (3x10^-5) * p_2 * M_g / f_b.
+    Considering Eq. (3) in LG14, the above equation is supposed to be
+        M_GC ~ (3x10^-5) * p_2 * M_g / (f_b * f_g).
+    I note that there is a missing f_g. Is it unimportant? (Maybe I understand now)
+
+*  The relation M_GC ~ (3x10^-5) * M_h describes the GC masses in each halo versus the progenitor galaxy mass at the time of GC formation. But MG10, LG14, and CGL18 applied this relation to compute the newly formed GC mass of a cluster formation event. At that time, the total GC mass within the parent halo is the cumulative version of the newly formed GC mass, which does not agree with this relation.
+
+*  The values of p_2 in MG10, LG14, and CGL18 are very different (p2~4, p2~2, and p2=6-12, respectively). (Maybe I understand now)
+
+*  Maybe a fraction of GCs are removed with the expelled halo mass: 
+        M_(h,expelled) = M_{h,i-1} + M_{h2,i-1} - M_{h,i}.
+
+*  MG10, LG14, and CGL18 all rely on certain cosmological DM simulations for the merger history. Luckily, Choksi & Gnedin (2019) suggested that major mergers are not dominant channel to trigger GC formation. So, I think such reliance is unnecessary, since we can replace it with a pure analytical and continuous version of halo mass evolution, such as Eq. (3) in R. H. Wechsler et al. (2001, arXiv:astro-ph/0108151) and Eq. (15) in F. C. van den Bosch (2002, arXiv:astro-ph/0105158).
+    But we have to change the discrete, merger-based GC formation criterion into a continuous version, or all GCs will be formed at the beginning since the the halo mass growth rate is large only at that period. In previous models, the GC formation rate (M_GC) is a Heaviside function of the halo mass growth rate (R_m): 
+        if R_m < p_3: M_GC = 0, 
+        if R_m < p_3: M_GC = (3x10^-5) * M_h;
+    a regular method to smoothen such discrete function is to change it into a "Sigmoid" or tanh function. 
+    One of the benefits of the pure analytic model is that we can study some basic properties more easily. For example, we can plot a group of continuous metallicity distributions to investigate the transition from bimodal to single-peak (we can even plot a bifurcation diagram).
+
+    
