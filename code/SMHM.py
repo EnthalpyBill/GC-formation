@@ -47,5 +47,3 @@ def log_smhm_b13(log_mh, z):
     return log_epsilon + log_m1 + \
            fun1(log_mh-log_m1, alpha, delta, gamma) - \
            fun1(0, alpha, delta, gamma)
-
-# ***** Eq. (3) in Behroozi et al. (2013) *****

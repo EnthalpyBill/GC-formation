@@ -18,6 +18,6 @@ c = ["k", "r", "b", "g"]
 
 for i in range(len(z)):
     plt.plot(log_mh, np.log10(bsg.star_ratio_lg14(10**log_mh, z[i])), c=c[i], ls="--")
-    plt.plot(log_mh, np.log10(bsg.gas_ratio(10**log_mh, z[i])), c=c[i], ls="-")
+    plt.plot(log_mh, np.log10(bsg.gas_ratio_cgl18(10**log_mh, z[i])), c=c[i], ls="-")
 
 plt.show()
