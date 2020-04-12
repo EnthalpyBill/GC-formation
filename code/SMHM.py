@@ -15,8 +15,7 @@ def scale_factor(z):
     return 1 / (1+z)
 
 def cutoff(a):
-    # Exponential cutoff of evolution of m_star(mh) with scale factor
-
+    # Exponential cutoff of evolution of SMHM relation with scale factor
     return np.exp(-4*a*a)
 
 def fun1(x, alpha, delta, gamma):
@@ -28,7 +27,7 @@ def log_smhm_b13(log_mh, z):
     # SMHM relation in Behroozi et al. (2013)
 
     a = scale_factor(z)
-    # Exponential cutoff of evolution of m_star(mh) with scale factor
+    # Exponential cutoff of evolution of SMHM relation with scale factor
     nu = cutoff(a)
     # Characteristic stellar mass to halo mass ratio
     log_epsilon = -1.777 + (-0.006*(a-1) + \

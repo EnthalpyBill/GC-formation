@@ -9,12 +9,15 @@ By Bill Chen
 
 import numpy as np
 from SMHM import log_smhm_b13
+import BSG_ratio as bsg
 import matplotlib.pyplot as plt
 
-log_mh = np.linspace(10, 15, 100+1)
-z = [0,1,2,3,5]
+log_mh = np.linspace(9.5, 14, 100+1)
+z = np.array([0, 1, 3, 5])
+c = ["k", "r", "b", "g"]
 
 for i in range(len(z)):
-    plt.plot(log_mh, log_smhm_b13(log_mh, z[i])-log_mh)
+    plt.plot(log_mh, np.log10(bsg.star_ratio_lg14(10**log_mh, z[i])), c=c[i], ls="--")
+    plt.plot(log_mh, np.log10(bsg.gas_ratio(10**log_mh, z[i])), c=c[i], ls="-")
 
 plt.show()
