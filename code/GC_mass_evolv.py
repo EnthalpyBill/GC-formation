@@ -15,8 +15,8 @@ import numpy as np
 
 def t_tid_cg18(m):
     # Tidally-limited disruption timescale in Choksi & Gnedin (2018)
-    p = 0.5
-    return 5 * ((m/2e5)**(2/3)) * (p/0.5)
+    P = 0.5
+    return 5 * ((m/2e5)**(2/3)) * (P/0.5)
 
 def GC_dyn_evolv_cg18(m0, t):
     # Dynamic evolution of GC in Choksi & Gnedin (2018)
