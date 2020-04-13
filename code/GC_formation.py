@@ -78,5 +78,7 @@ GC_pop_mat_mass = np.zeros([z_slice, pop_slice])
 #     for k in range(pop_slice):
 #         GC_pop_mat_mass[j][k] = gme.GC_mass_evolv_cg18(GC_pop_m_mean[k], t1 - GC_time_list[j])
 
-np.savetxt("./output/GC_formation_25_07_3e-5.txt",
-           [GC_fe_list, np.sum(GC_pop_mat, axis=1)])
+print(GC_pop_m_tot)
+
+# np.savetxt("./output/GC_formation_25_07_3e-5.txt",
+#            [GC_fe_list, np.sum(GC_pop_mat, axis=1)])
